@@ -4,7 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:lib && npm run build:showcase",
+    "build:lib": "ng build --project ng-web-console && npm run copy:readme",
+    "build:showcase": "ng build --project ng-web-console-showcase",
+    "copy:readme": "cp README.md dist/ng-web-console",
     "format:check": "prettier --check \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
     "watch": "ng build --watch --configuration development",
