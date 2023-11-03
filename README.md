@@ -1,7 +1,7 @@
 # NgWebConsole
 
-![](./docs/logo.webp)
-![](./docs/preview.png)
+![](https://raw.githubusercontent.com/kreuzerk/ng-web-console/main/docs/logo.webp)
+![](https://raw.githubusercontent.com/kreuzerk/ng-web-console/main/docs/preview.png)
 
 > Display console.log statements in your web page.
 
