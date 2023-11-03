@@ -7,7 +7,7 @@
     "build": "npm run build:lib && npm run build:showcase",
     "build:lib": "ng build --project ng-web-console && npm run copy:readme",
     "build:showcase": "ng build --project ng-web-console-showcase",
-    "bump-versions": "npm run bump-version:top && npm run bump-version:lib",
+    "bump-versions": "npm run bump-version:top version $VERSION && npm run bump-version:lib version $VERSION",
     "bump-version:top": "rjp package.json version $VERSION",
     "bump-version:lib": "rjp projects/ng-web-console/package.json version $VERSION",
     "copy:readme": "cp README.md dist/ng-web-console",
