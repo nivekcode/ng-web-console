@@ -1,13 +1,11 @@
-import {ChangeDetectorRef, Component, inject, OnInit} from '@angular/core';
-import {ReplaySubject, scan} from "rxjs";
+import {Component, OnInit} from '@angular/core';
+import {ReplaySubject} from "rxjs";
 import {AsyncPipe, JsonPipe, NgFor} from "@angular/common";
 
 @Component({
   standalone: true,
   selector: 'child',
-  template: `
-    <h1>Child</h1>
-  `,
+  template: ``,
   imports: [JsonPipe, AsyncPipe, NgFor]
 })
 export class ChildComponent implements OnInit {
@@ -29,27 +27,12 @@ export class Proxy {
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Logs</h1>
     <child/>
-
-    <h1>With async</h1>
-    <div *ngFor="let log of log$ | async">
-      {{log | json}}
-    </div>
-  `,
-  styleUrls: ['./app.component.scss']
+      <ng-web-console/>
+  `
 })
 export class AppComponent {
-  title = 'ng-web-console-showcase';
-
-  log$ = Proxy.messages.pipe(
-    scan((acc: any[], curr: any) => {
-      acc.push(curr);
-      return acc;
-    }, [])
-  );
-
-  constructor() {
+   constructor() {
     const log = console.log;
 
     console.log = function () {
@@ -57,6 +40,12 @@ export class AppComponent {
       log.apply(console, arguments as any);
     }
 
-    console.log('foo', 'bar');
+    const someObject = {
+      foo: {
+        bar: ['foo', 'bar']
+      },
+      baz: 'qux'
+    }
+     console.log('some object', someObject);
   }
 }
