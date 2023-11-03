@@ -4,7 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:lib && npm run build:showcase",
+    "build:lib": "ng build --project ng-web-console && npm run copy:readme",
+    "build:showcase": "ng build --project ng-web-console-showcase",
+    "bump-versions": "npm run bump-version:top && npm run bump-version:lib",
+    "bump-version:top": "rjp package.json version $VERSION",
+    "bump-version:lib": "rjp projects/ng-web-console/package.json version $VERSION",
+    "copy:readme": "cp README.md dist/ng-web-console",
     "format:check": "prettier --check \"projects/**/*.ts\"",
     "format:write": "prettier --write \"projects/**/*.ts\"",
     "watch": "ng build --watch --configuration development",
@@ -49,6 +55,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^16.2.0",
     "prettier": "^3.0.3",
+    "replace-json-property": "^1.9.0",
     "typescript": "~5.1.3"
   }
 }
