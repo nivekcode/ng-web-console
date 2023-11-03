@@ -6,7 +6,7 @@
     "@semantic-release/changelog",
     "@semantic-release/npm",
     ["@semantic-release/exec", {
-      "prepareCmd": "VERSION=${nextRelease.version} npm run bump-version"
+      "prepareCmd": "VERSION=${nextRelease.version} npm run bump-versions"
     }],
     ["@semantic-release/git", {
       "assets": ["package.json", "CHANGELOG.md"],
