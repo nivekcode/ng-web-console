@@ -9,7 +9,7 @@ export class LogBus {
 
   public static getLogs() {
     return LogBus.logs.pipe(
-      scan((acc: any[], curr: any) => {
+      scan((acc: string[], curr: string) => {
         acc.push(curr);
         return acc;
       }, []),

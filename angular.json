@@ -97,6 +97,15 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-web-console-showcase/**/*.ts",
+              "projects/ng-web-console-showcase/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -128,6 +137,15 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ng-web-console/**/*.ts",
+              "projects/ng-web-console/**/*.html"
             ]
           }
         }
