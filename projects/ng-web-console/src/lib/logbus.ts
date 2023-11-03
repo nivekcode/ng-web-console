@@ -1,4 +1,4 @@
-import {ReplaySubject, scan} from "rxjs";
+import { ReplaySubject, scan } from 'rxjs';
 
 export class LogBus {
   private static logs = new ReplaySubject<string>();
@@ -12,20 +12,20 @@ export class LogBus {
       scan((acc: any[], curr: any) => {
         acc.push(curr);
         return acc;
-      }, [])
+      }, []),
     );
   }
 
   private static convertArgumentsToString(args: IArguments): string {
     const argsArray = Array.from(args);
-    return argsArray.map(arg => {
-      if (typeof arg === 'object') {
-        return JSON.stringify(arg);
-      } else {
-        return arg;
-      }
-    }).toString();
+    return argsArray
+      .map((arg) => {
+        if (typeof arg === 'object') {
+          return JSON.stringify(arg);
+        } else {
+          return arg;
+        }
+      })
+      .toString();
   }
-
-
 }

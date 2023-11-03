@@ -1,15 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {ReplaySubject} from "rxjs";
-import {AsyncPipe, JsonPipe, NgFor} from "@angular/common";
+import { Component, OnInit } from '@angular/core';
+import { ReplaySubject } from 'rxjs';
+import { AsyncPipe, JsonPipe, NgFor } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'child',
   template: ``,
-  imports: [JsonPipe, AsyncPipe, NgFor]
+  imports: [JsonPipe, AsyncPipe, NgFor],
 })
 export class ChildComponent implements OnInit {
-
   constructor() {
     console.log('ChildComponent constructor');
   }
@@ -17,7 +16,6 @@ export class ChildComponent implements OnInit {
   ngOnInit(): void {
     console.log('ChildComponent ngOnInit');
   }
-
 }
 
 export class Proxy {
@@ -27,25 +25,25 @@ export class Proxy {
 @Component({
   selector: 'app-root',
   template: `
-    <child/>
-      <ng-web-console/>
-  `
+    <child />
+    <ng-web-console />
+  `,
 })
 export class AppComponent {
-   constructor() {
+  constructor() {
     const log = console.log;
 
     console.log = function () {
       Proxy.messages.next(Object.values(arguments).toString());
       log.apply(console, arguments as any);
-    }
+    };
 
     const someObject = {
       foo: {
-        bar: ['foo', 'bar']
+        bar: ['foo', 'bar'],
       },
-      baz: 'qux'
-    }
-     console.log('some object', someObject);
+      baz: 'qux',
+    };
+    console.log('some object', someObject);
   }
 }
