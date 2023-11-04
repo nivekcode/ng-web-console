@@ -13,7 +13,6 @@ import { LogBus } from './logbus';
   standalone: true,
   selector: 'ng-web-console',
   template: `
-    <h1>Web Console</h1>
     <ngx-codemirror
       [ngModel]="logs$ | async"
       [options]="{
