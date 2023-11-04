@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/kreuzerk/ng-web-console/compare/v1.0.0...v1.0.1) (2023-11-04)
+
+
+### Bug Fixes
+
+* 🐛 remove leftover title ([e8a8d61](https://github.com/kreuzerk/ng-web-console/commit/e8a8d6145cde172fdffd13629490336f8bb37672))
+
 # 1.0.0 (2023-11-03)
 
 

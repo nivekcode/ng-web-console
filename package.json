@@ -1,6 +1,6 @@
 {
   "name": "ng-web-console",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "ng": "ng",
@@ -70,6 +70,10 @@
   "homepage": "https://github.com/kreuzerk/ng-web-console#readme",
   "license": "MIT",
   "keywords": [
-    "angular", "console", "web-console", "web", "ng-web-console"
+    "angular",
+    "console",
+    "web-console",
+    "web",
+    "ng-web-console"
   ]
 }
