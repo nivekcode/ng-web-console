@@ -1,6 +1,6 @@
 # NgWebConsole
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![](https://raw.githubusercontent.com/kreuzerk/ng-web-console/main/docs/logo.webp)
@@ -72,6 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@kevinkreuzer"><img src="https://avatars.githubusercontent.com/u/5468954?v=4?s=100" width="100px;" alt="Nivek"/><br /><sub><b>Nivek</b></sub></a><br /><a href="https://github.com/kreuzerk/ng-web-console/commits?author=kreuzerk" title="Code">💻</a> <a href="https://github.com/kreuzerk/ng-web-console/commits?author=kreuzerk" title="Documentation">📖</a> <a href="#example-kreuzerk" title="Examples">💡</a> <a href="#ideas-kreuzerk" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-kreuzerk" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-kreuzerk" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/tayamba-mwanza/"><img src="https://avatars.githubusercontent.com/u/11971384?v=4?s=100" width="100px;" alt="Tayamba Mwanza"/><br /><sub><b>Tayamba Mwanza</b></sub></a><br /><a href="#ideas-tayambamwanza" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
   <tfoot>
