@@ -1,13 +1,13 @@
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/markdown/markdown';
 
-import { Component, ViewEncapsulation } from '@angular/core';
-import { AsyncPipe, NgFor } from '@angular/common';
-import { CodemirrorModule } from '@ctrl/ngx-codemirror';
-import { FormsModule } from '@angular/forms';
-import { map } from 'rxjs';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {AsyncPipe, NgFor} from '@angular/common';
+import {CodemirrorModule} from '@ctrl/ngx-codemirror';
+import {FormsModule} from '@angular/forms';
+import {scan} from 'rxjs';
 
-import { LogBus } from './logbus';
+import {NgWebConsoleDispatcher} from "./ng-web-console-actions.dispatcher";
 
 @Component({
   standalone: true,
@@ -27,16 +27,14 @@ import { LogBus } from './logbus';
   encapsulation: ViewEncapsulation.None,
 })
 export class NgWebConsoleComponent {
-  logs$ = LogBus.getLogs().pipe(
-    map((logs) =>
-      logs
-        .map((log, index) => {
-          if (index === logs.length - 1) {
-            return log;
+  logs$ = NgWebConsoleDispatcher.actions$
+    .pipe(
+      scan((acc, action) => {
+          if (action.type === 'reset') {
+            return '';
           }
-          return `${log}\n`;
-        })
-        .reduce((acc, curr) => acc + curr, ''),
-    ),
-  );
+          return acc + action.payload + '\n';
+        }, ''
+      ),
+    );
 }
