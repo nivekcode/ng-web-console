@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kreuzerk/ng-web-console/compare/v1.1.0...v1.2.0) (2023-11-14)
+
+
+### Features
+
+* 🎸 clear method ([63424be](https://github.com/kreuzerk/ng-web-console/commit/63424be0977e92ff067b9b62e0d54ec43a272a2b))
+
 # [1.1.0](https://github.com/kreuzerk/ng-web-console/compare/v1.0.1...v1.1.0) (2023-11-06)
 
 
